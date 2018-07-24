@@ -1,0 +1,53 @@
+<div class="row">
+  <div class="col-lg-6 text-right">How hungry you are ?</div>
+  <div class="col-lg-6 form-group">
+      <select id="dvHungryRate" class="form-control">
+        <option>Very Hungry</option>
+        <option>Normal</option>
+        <option>Not So Hungry</option>
+      </select>
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-6 text-right">Routine or special ?</div>
+    <div class="col-lg-6 form-group">
+        <select id="dvRecipietype" class="form-control">
+          <option>Routine</option>
+          <option>Special</option>
+        </select>
+      </div>
+  </div>
+  <div class="row">
+      <div class="col-lg-6 text-right"></div>
+      <div class="col-lg-6 form-group">
+      <button type="button" id="btnFindMeal" (click)="FindMeal()" class="btn btn-primary">Submit</button>
+      </div>
+  </div>  
+  <div class="row"><hr></div>
+  <div class="container" id="dvResults" *ngIf="blnMealFound">
+  <div class="row"><p class="col-lg-12 text-center">Thanks for your patience...</p></div>
+  <div class="row"><p class="col-lg-12 text-center">It's been long since you cook the below menu :</p></div>
+  <div class="row">
+      <div class="col-lg-6 text-right">Vegetable :</div>
+      <div class="col-lg-6 form-group">{{vegetable}}</div>
+  </div> 
+  <div class="row">
+      <div class="col-lg-6 text-right">Roti :</div>
+      <div class="col-lg-6 form-group">{{roti}}</div>
+  </div> 
+  <div class="row">
+      <div class="col-lg-6 text-right">Rice :</div>
+      <div class="col-lg-6 form-group">{{rice}}</div>
+  </div> 
+  <div class="row">
+      <div class="col-lg-6 text-right">Dal :</div>
+      <div class="col-lg-6 form-group">{{dal}}</div>
+  </div> 
+  <div class="row">
+      <div class="col-lg-6 text-right">You like my suggestion ?</div>
+      <div class="col-lg-6 form-group">
+      <button type="button" class="btn btn-success">Yes</button>
+      <button type="button" class="btn btn-primary">Suggest more</button>
+      </div>
+  </div>
+</div>
